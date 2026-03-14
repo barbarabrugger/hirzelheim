@@ -10,15 +10,13 @@ Haben Sie Fragen zum Hirzelheim oder möchten Sie uns besuchen? Wir nehmen uns g
 
 ### Adresse
 
-Stiftung Hirzelheim
-Oberburg 6
-8158 Regensberg
+Stiftung Hirzelheim Regensberg
+Unterburg 23
+CH-8158 Regensberg
 
 ### Telefon
 
-[044 853 12 28](tel:0448531228)
-
-<!-- PRÜFEN: Telefonnummer aktuell? -->
+[044 853 12 32](tel:0448531232)
 
 ### E-Mail
 
@@ -28,21 +26,31 @@ Oberburg 6
 
 ### Mit dem öffentlichen Verkehr
 
-<!-- PRÜFEN: Aktuelle ÖV-Verbindung -->
+Das Hirzelheim ist vom Zürcher Hauptbahnhof aus in rund 30 Minuten erreichbar.
+
 - S-Bahn bis Dielsdorf, dann Bus nach Regensberg
-- Ab Regensberg Bushaltestelle wenige Gehminuten zum Hirzelheim
+- Ab Bushaltestelle Regensberg wenige Gehminuten zum Hirzelheim
 
 ### Mit dem Auto
 
-- Autobahn A1, Ausfahrt Dielsdorf
-- Parkplätze stehen begrenzt zur Verfügung
+Parkplätze stehen begrenzt zur Verfügung.
 
 ## Besichtigung vereinbaren
 
 Möchten Sie das Hirzelheim kennenlernen? Vereinbaren Sie einfach einen Besichtigungstermin. Rufen Sie uns an oder schreiben Sie uns eine E-Mail — wir zeigen Ihnen gerne unser Haus.
 
+## Bewerbungen
+
+Bewerbungen richten Sie bitte an:
+
+<!-- PRÜFEN: Ist Loredana Del Senno noch Pflegedienstleiterin? -->
+Frau Loredana Del Senno, Pflegedienstleiterin
+Stiftung Hirzelheim, Unterburg 23, 8158 Regensberg
+Tel. [044 853 12 32](tel:0448531232)
+E-Mail: [info@hirzelheim.ch](mailto:info@hirzelheim.ch)
+
 ## Downloads
 
-- [Anmeldeformular (PDF)](/documents/Anmeldeformular.pdf)
-- [Taxordnung 2025 (PDF)](/documents/Taxordnung_2025.pdf)
 - [Statuten der Stiftung (PDF)](/documents/Statuten_Stiftung_Hirzelheim.pdf)
+- [Anmeldeformular (PDF)](/documents/Anmeldeformular.pdf)
+<!-- PRÜFEN: Taxordnung 2025 — gibt es eine aktuelle Version? Auf der alten Site war keine Taxordnung verlinkt -->

@@ -1,45 +1,74 @@
 ---
 title: "Stiftung"
-description: "Die Stiftung Hirzelheim — Trägerschaft, Leitbild und Möglichkeiten zur Unterstützung."
+description: "Die Stiftung Hirzelheim Regensberg — Trägerschaft, Leitbild und Möglichkeiten zur Unterstützung."
 ---
+
+## Die Stiftung
+
+Die Stiftung Hirzelheim Regensberg ist eine private Stiftung. Sie wurde 1912 gegründet, steht unter staatlicher Aufsicht und wird von einem ehrenamtlichen Stiftungsrat geleitet.
+
+Die Stiftung kann ihre gemeinnützige Tätigkeit ohne staatliche Subventionen ausüben. Dies ist nur möglich dank der ständigen Hilfe eines grossen Spenderkreises.
+
+Die Stiftung Hirzelheim Regensberg ist im Handelsregister des Kantons Zürich eingetragen und als gemeinnützige Institution anerkannt.
 
 ## Stiftungsrat
 
-<!-- PRÜFEN: Aktuelle Zusammensetzung des Stiftungsrats -->
-Die Stiftung Hirzelheim wird von einem ehrenamtlichen Stiftungsrat geführt, der die strategische Ausrichtung des Heims verantwortet und die Geschäftsleitung beaufsichtigt.
+Für die Leitung und Überprüfung der Tätigkeit der Stiftung ist der ehrenamtliche Stiftungsrat verantwortlich, der aus mindestens sieben Personen besteht.
 
-Der Stiftungsrat setzt sich aus Persönlichkeiten zusammen, die sich mit Fachkompetenz und Engagement für das Wohl der Bewohnerinnen und Bewohner einsetzen.
+<!-- PRÜFEN: Aktuelle Zusammensetzung des Stiftungsrats — Stand der gescrapten Daten unklar -->
 
-## Leitbild
+| Name | Funktion |
+|------|----------|
+| Felix Wittwer | Präsident |
+| Dr. med. Jürg Fatzer | Vizepräsident |
+| Ernst Hurter | Finanzvorstand (Quästor) |
+| Daniela Schlatter | Aktuarin |
+| Ursula Läubli | Mitglied |
+| Karin Christen | Mitglied |
+| Nino Paganuzzi | Mitglied |
 
-Das Hirzelheim bietet hörbehinderten und betagten Menschen ein liebevolles, sicheres Zuhause. Unser Handeln orientiert sich an folgenden Grundsätzen:
+**Revisionsstelle:** Hasli Audit AG, Mandachstrasse 52, 8155 Niederhasli
 
-- **Würde und Respekt**: Jeder Mensch wird in seiner Einzigartigkeit respektiert und wertgeschätzt.
-- **Selbstbestimmung**: Unsere Bewohnenden gestalten ihren Alltag so selbständig wie möglich.
-- **Geborgenheit**: In unserem kleinen, familiären Rahmen fühlen sich Menschen aufgehoben und sicher.
-- **Fachkompetenz**: Professionelle Pflege und Betreuung, insbesondere für hörbehinderte Menschen, sind unser Kernauftrag.
-- **Offenheit**: Wir pflegen einen offenen Umgang mit Angehörigen, Behörden und der Öffentlichkeit.
+### Kontakt Stiftungsrat
+
+- Felix Wittwer, Präsident: [044 856 01 82](tel:0448560182)
+- Ernst Hurter, Finanzvorstand: [044 875 00 02](tel:0448750002)
 
 ## Gönner werden
 
-Das Hirzelheim ist als gemeinnützige Stiftung auf Unterstützung angewiesen. Als Gönnerin oder Gönner helfen Sie uns, unseren Bewohnenden ein liebevolles Zuhause zu bieten und besondere Anschaffungen oder Aktivitäten zu ermöglichen.
+Ein Gönnerkreis unterstützt mit Spenden und weiteren Beiträgen tatkräftig die Entwicklung des Hirzelheims. Das Hirzelheim besteht seit 1912 und möchte weiterhin als kleine, lebendige und soziale Einrichtung fortbestehen.
 
-### Was Ihre Spende bewirkt
+Sie unterstützen damit direkt die Erhaltung, Förderung und Weiterentwicklung der sozialen Einrichtung Hirzelheim.
+
+Die Gönnerinnen und Gönner werden einmal im Jahr zu einem Gönneranlass ins Hirzelheim eingeladen. Mit dem Jahresbericht und einer Gönnerinformation erhalten sie Einblick ins Geschehen im Hirzelheim.
+
+### Was Ihre Unterstützung bewirkt
 
 - Finanzierung besonderer Aktivitäten und Ausflüge
 - Anschaffung von Hilfsmitteln und Einrichtungsgegenständen
 - Unterhalt und Renovation des historischen Gebäudes
-- Weiterbildung der Mitarbeitenden in Gebärdensprache
+- Weiterbildung der Mitarbeitenden
 
 ## Spenden
 
-Ihre Spende kommt direkt unseren Bewohnerinnen und Bewohnern zugute. Die Stiftung Hirzelheim ist steuerbefreit — Ihre Spende können Sie von den Steuern abziehen.
+Für die gemeinnützige Tätigkeit des Hirzelheimes und die weiteren Aufgaben der Stiftung ist eine tatkräftige Unterstützung durch Private und Institutionen von grosser Bedeutung.
+
+Die Stiftung Hirzelheim Regensberg ist als gemeinnützige Institution anerkannt. **Zuwendungen und Spenden sind steuerlich abzugsberechtigt.**
+
+Immer wieder denken Personen auch an das Hirzelheim beim Erstellen ihres Testamentes und wenden dem Hirzelheim ein Vermächtnis zu.
 
 **Spendenkonto**
-Stiftung Hirzelheim
-IBAN: CH30 0070 0110 0009 0604 8
-Zürcher Kantonalbank
 
-<!-- PRÜFEN: IBAN und Bankverbindung aktuell? -->
+| | |
+|---|---|
+| **IBAN** | CH54 0900 0000 8001 2637 2 |
+| **Postkonto** | 80-12637-2 |
+| **Kontoinhaber** | Stiftung Hirzelheim Regensberg, Unterburg 23, 8158 Regensberg |
 
 Haben Sie Fragen zur Stiftung oder möchten Sie uns auf andere Weise unterstützen? Wir freuen uns über Ihre [Kontaktaufnahme](/kontakt/).
+
+## Projekt: Erhaltung Hirzelheim
+
+Der Stiftungsrat und die Geschäftsleitung setzen sich für die Erweiterung des Hirzelheimes ein, um dessen Fortbestand als wichtige soziale Institution in Regensberg zu sichern und die Qualität als Wohn- und Pflegeheim mit persönlicher Note und familiärer Atmosphäre zu stärken.
+
+Zuwendungen und Spenden für dieses Projekt sind ebenfalls steuerlich abzugsberechtigt.

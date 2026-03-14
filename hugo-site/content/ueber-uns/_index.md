@@ -5,53 +5,79 @@ description: "Das Hirzelheim — ein familiäres Zuhause für hörbehinderte und
 
 ## Das Heim
 
-Das Hirzelheim liegt im mittelalterlichen Städtchen Regensberg, hoch über dem Zürcher Unterland, mit einer wunderbaren Aussicht auf die Lägern und in die Alpen. In unserem historischen Riegelhaus bieten wir ein familiäres Zuhause für hörbehinderte und betagte Menschen.
+Das Hirzelheim liegt an prächtiger Aussichtslage eingangs des historischen Städtchens Regensberg im Zürcher Unterland. In unserem über 450-jährigen Riegelhaus bieten wir gehörlosen, schwerhörigen und hörenden Frauen und Männern einen Lebensraum, in dem sie sich zuhause fühlen.
 
-<!-- PRÜFEN: Aktuelle Zimmeranzahl und Platzzahl — auf der alten Site werden verschiedene Zahlen genannt (14 Zimmer / 20 Plätze / 19 Menschen) -->
-Unser Haus verfügt über Einzel- und Doppelzimmer, die von den Bewohnerinnen und Bewohnern persönlich eingerichtet werden können. Alle Zimmer bieten Komfort und Geborgenheit — und die meisten einen Blick ins Grüne.
+Das Haus ist durchgehend rollstuhlgängig und verfügt über eine Liftanlage. Neben den hellen und freundlichen Räumen bietet das Heim seinen Bewohnerinnen und Bewohnern einen herrlichen Garten mit wunderbarer Aussicht auf die Berge.
 
-### Das Haus
+### Die Zimmer
 
-Das Hirzelheim ist in einem wunderschönen, historischen Riegelhaus untergebracht. Die Räumlichkeiten verbinden den Charme des alten Gebäudes mit modernem Wohnkomfort. Gemeinschaftsräume laden zum geselligen Beisammensein ein, und wer Ruhe sucht, findet sie im eigenen Zimmer oder im Garten.
+Die insgesamt 14 Zimmer sind mehrheitlich möbliert, können aber auch nach persönlichen Wünschen eingerichtet werden. Ein eigenes Bad mit Dusche und WC ist in die meisten Einzel- und Doppelzimmer integriert.
 
 - Helle, freundliche Einzel- und Doppelzimmer
-- Gemütliche Aufenthaltsräume
+- Wohnmöglichkeit für Paare
+- Zimmer mit Balkon verfügbar
+- Eigene Dusche und WC in den meisten Zimmern
+
+### Weitere Räumlichkeiten
+
+- Gemütliche Gemeinschaftsräume
 - Grosser Speisesaal mit familiärer Atmosphäre
-- Gepflegter Garten mit Sitzplätzen und Aussicht
-- Rollstuhlgängige Bereiche
+- Pflegebad
+- Gepflegter Garten mit Sitzplätzen und Aussicht auf die Berge
 
 ### Lage
 
-Regensberg ist eines der besterhaltenen mittelalterlichen Städtchen der Schweiz. Die Lage auf dem Lägernkamm bietet eine einzigartige Aussicht und eine ruhige, grüne Umgebung — und trotzdem ist man mit dem öffentlichen Verkehr gut angebunden.
+Regensberg ist eines der besterhaltenen mittelalterlichen Städtchen der Schweiz. Die Lage bietet eine einzigartige Aussicht und eine ruhige, grüne Umgebung — und trotzdem ist das Hirzelheim mit dem öffentlichen Verkehr vom Zürcher Hauptbahnhof aus in rund 30 Minuten erreichbar.
 
-<!-- PRÜFEN: ÖV-Verbindung aktuell -->
-- Busverbindung ab Dielsdorf (S-Bahn-Anschluss)
+- Anschluss an den öffentlichen Verkehr
 - Ruhige, ländliche Umgebung
 - Spazierwege direkt vor der Haustür
+- Freie Besuchszeiten
 
 ### Der Garten
 
-Unser Garten ist ein Herzstück des Hirzelheims. Die Bewohnerinnen und Bewohner geniessen ihn bei schönem Wetter täglich — sei es für einen Spaziergang, eine Tasse Kaffee im Freien oder einfach zum Verweilen und Geniessen der Aussicht.
+Unser Garten ist ein Herzstück des Hirzelheims. Die Bewohnerinnen und Bewohner geniessen ihn bei schönem Wetter täglich — sei es für einen Spaziergang, eine Tasse Kaffee im Freien oder einfach zum Verweilen und Geniessen der Aussicht auf die Berge.
 
 ## Das Team
 
-Im Hirzelheim arbeitet ein kleines, engagiertes Team aus Pflegefachpersonen, Betreuenden und Hauswirtschaftsmitarbeitenden. Was uns auszeichnet: Viele unserer Mitarbeitenden beherrschen die Gebärdensprache oder haben Erfahrung im Umgang mit hörbehinderten Menschen.
+Ein Team von qualifizierten gehörlosen und hörenden Fachleuten sorgt zusammen mit der Heimleitung für die persönliche und ganzheitliche Betreuung — täglich, rund um die Uhr.
 
-<!-- PRÜFEN: Aktuelle Heimleitung und Teamstruktur -->
-Die Leitung des Heims wird durch eine erfahrene Heimleiterin oder einen erfahrenen Heimleiter wahrgenommen, die oder der sowohl für die pflegerische als auch die administrative Führung verantwortlich ist.
+<!-- PRÜFEN: Ist Loredana Del Senno noch Pflegedienstleiterin? Aktuelle Teamzusammensetzung? -->
+
+**Pflegedienstleiterin:** Loredana Del Senno
 
 Unser Team umfasst:
 - Heimleitung
+- Pflegedienstleitung
 - Diplomierte Pflegefachpersonen
 - Fachpersonen Gesundheit (FaGe)
-- Betreuungspersonal
+- Pflegehelferinnen und Pflegehelfer SRK
 - Hauswirtschaft und Küche
 
 ## Geschichte
 
-Die Stiftung Hirzelheim wurde gegründet, um hörbehinderten Menschen im Alter ein würdevolles Zuhause zu bieten. Der Name geht auf die Familie Hirzel zurück, die das Stiftungsvermögen zur Verfügung stellte.
+### Gründung (1911–1912)
 
-<!-- PRÜFEN: Genaues Gründungsjahr und Geschichte der Stiftung -->
-Seit vielen Jahrzehnten bietet das Hirzelheim ein Zuhause für Menschen, die aufgrund ihrer Hörbehinderung in grösseren Institutionen oft an Grenzen stossen. Die familiäre Grösse und die Kompetenz im Umgang mit Hörbehinderungen machen das Hirzelheim bis heute einzigartig.
+Das Hirzelheim verdankt seine Entstehung der grosszügigen Schenkung von Frau Elise Hirzel-von Schwerzenbach im Jahre 1911. Sie machte diese Schenkung zum Andenken an Dr. med. Johann Kaspar Hirzel (1751–1817), dem Stifter der Hülfsgesellschaft in Zürich. Dr. Hirzel war Stadtarzt von Zürich und setzte sich lebenslang für die Verbesserung des Loses der Behinderten ein.
 
-Im Laufe der Jahre hat sich das Heim weiterentwickelt: Heute nehmen wir auch betagte Menschen ohne Hörbehinderung auf, die ein kleines, persönliches Heim schätzen. Die Gebärdensprache und die besondere Aufmerksamkeit für die Bedürfnisse hörbehinderter Menschen bleiben aber ein zentraler Teil unserer Identität.
+Die Schenkung erfolgte für die Gründung eines Heimes für gehörlose Frauen. Das Heim sollte im Kanton Zürich errichtet werden, in einer schönen, ruhigen ländlichen Gegend, einfach aber bequem eingerichtet, und den Namen «Hirzelheim» tragen.
+
+Am 1. Dezember 1911 wurde der Verein für das Hirzelheim gegründet. Aus über einhundert zum Kaufe angebotenen Liegenschaften wurde das Haus zum Rosengarten in Regensberg ausgewählt und 1912 erworben.
+
+### Eröffnung und Anfangsjahre
+
+Am 4. Januar 1912 fand die Eröffnung des Heimes statt unter der damaligen Bezeichnung «Taubstummenasyl Hirzelheim». In den Anfangsjahren traten hauptsächlich junge gehörlose Frauen ins Hirzelheim ein. Man war bestrebt, ihnen eine Ausbildungsmöglichkeit zu bieten und ihnen den Schritt in die Selbständigkeit zu ermöglichen. Die Frauen arbeiteten in Haus und Garten mit.
+
+Im Ersten Weltkrieg beherbergte das Hirzelheim bereits 22 Frauen.
+
+### Umwandlung in Stiftung (1970)
+
+Im Jahre 1970 errichtete der Verein für das Hirzelheim an seiner Stelle die Stiftung Hirzelheim Regensberg, welche die Aufgabe des Heimbetriebs und der Gehörlosenfürsorge übernahm und weiterführte.
+
+### Erweiterung des Zwecks (1987)
+
+Im Jahre 1987 wurde die Zweckbestimmung des Hirzelheimes den geänderten Verhältnissen angepasst. Seither ist das Hirzelheim ein Heim für hörbehinderte und für betagte Menschen.
+
+### Heute
+
+Die Stiftung Hirzelheim Regensberg bietet heute gehörlosen, schwerhörigen und hörenden Frauen und Männern einen Lebensraum, in dem sie sich zuhause fühlen. Die Stiftung ist eine private Stiftung, die unter der Leitung eines ehrenamtlichen Stiftungsrates steht und ihre gemeinnützige Tätigkeit ohne staatliche Subventionen ausübt.
