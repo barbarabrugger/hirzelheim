@@ -1,19 +1,19 @@
 {{ define "main" }}
 
 <!-- Page Header -->
-<section class="bg-sage-600 text-white py-16 md:py-20 relative overflow-hidden">
+<section class="bg-ember-500 text-white py-16 md:py-20 relative overflow-hidden">
   <div class="absolute inset-0 opacity-10">
     <svg width="100%" height="100%" aria-hidden="true"><circle cx="85%" cy="20%" r="200" fill="white"/></svg>
   </div>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <h1 class="text-3xl md:text-5xl font-serif font-bold">{{ .Title }}</h1>
-    <p class="text-lg md:text-xl text-sage-100 mt-4 max-w-2xl font-light">
+    <p class="text-lg md:text-xl text-sun-100 mt-4 max-w-2xl font-light">
       Wir freuen uns auf Sie — rufen Sie uns an oder schreiben Sie uns.
     </p>
   </div>
   <div class="absolute bottom-0 left-0 right-0">
     <svg viewBox="0 0 1440 60" fill="none" class="w-full" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#FBF9F4"/>
+      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#FFFCF7"/>
     </svg>
   </div>
 </section>
@@ -27,36 +27,36 @@
         <!-- Schnellkontakt-Karten -->
         <div class="space-y-4 mb-10">
           <a href="tel:{{ .Site.Params.phone }}" class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all group">
-            <div class="w-14 h-14 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-sage-600 transition-colors">
+            <div class="w-14 h-14 bg-ember-400 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-ember-500 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
             </div>
             <div>
-              <div class="font-semibold text-sage-800 text-lg">{{ .Site.Params.phone }}</div>
+              <div class="font-semibold text-gray-800 text-lg">{{ .Site.Params.phone }}</div>
               <div class="text-sm text-gray-500">Rufen Sie uns an — wir sind gerne für Sie da</div>
             </div>
           </a>
           <a href="mailto:{{ .Site.Params.email }}" class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all group">
-            <div class="w-14 h-14 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-sage-600 transition-colors">
+            <div class="w-14 h-14 bg-ember-400 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-ember-500 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
               </svg>
             </div>
             <div>
-              <div class="font-semibold text-sage-800 text-lg">{{ .Site.Params.email }}</div>
+              <div class="font-semibold text-gray-800 text-lg">{{ .Site.Params.email }}</div>
               <div class="text-sm text-gray-500">Schreiben Sie uns jederzeit</div>
             </div>
           </a>
           <div class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm">
-            <div class="w-14 h-14 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 bg-ember-400 rounded-full flex items-center justify-center flex-shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
             </div>
             <div>
-              <div class="font-semibold text-sage-800">Stiftung Hirzelheim</div>
+              <div class="font-semibold text-gray-800">Stiftung Hirzelheim</div>
               <div class="text-sm text-gray-500">{{ .Site.Params.address }}</div>
               <div class="text-sm text-gray-400">Ca. 30 Minuten ab Zürich HB</div>
             </div>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Restlicher Content -->
-        <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-sage-800 prose-p:text-gray-600 prose-a:text-sage-600">
+        <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-800 prose-p:text-gray-600 prose-a:text-ember-500">
           {{ .Content }}
         </div>
       </div>
@@ -73,32 +73,32 @@
       <div class="space-y-8">
         <!-- Kontaktformular -->
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-          <h2 class="text-xl font-serif font-bold text-sage-800 mb-2">Schreiben Sie uns</h2>
+          <h2 class="text-xl font-serif font-bold text-gray-800 mb-2">Schreiben Sie uns</h2>
           <p class="text-gray-500 text-sm mb-6">Wir antworten Ihnen so schnell wie möglich.</p>
           <form action="https://formspree.io/f/placeholder" method="POST" class="space-y-4">
             <!-- PRÜFEN: Formspree oder anderes Formular-Backend einrichten -->
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
               <input type="text" id="name" name="name" required
-                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-400 focus:border-sage-400 outline-none transition-colors bg-warm-50">
+                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-ember-300 focus:border-ember-300 outline-none transition-colors bg-warm-50">
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Mail *</label>
               <input type="email" id="email" name="email" required
-                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-400 focus:border-sage-400 outline-none transition-colors bg-warm-50">
+                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-ember-300 focus:border-ember-300 outline-none transition-colors bg-warm-50">
             </div>
             <div>
               <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
               <input type="tel" id="phone" name="phone"
-                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-400 focus:border-sage-400 outline-none transition-colors bg-warm-50">
+                     class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-ember-300 focus:border-ember-300 outline-none transition-colors bg-warm-50">
             </div>
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Ihre Nachricht *</label>
               <textarea id="message" name="message" rows="5" required
-                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-400 focus:border-sage-400 outline-none transition-colors resize-y bg-warm-50"></textarea>
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-ember-300 focus:border-ember-300 outline-none transition-colors resize-y bg-warm-50"></textarea>
             </div>
             <button type="submit"
-                    class="w-full px-6 py-3.5 bg-sage-500 text-white font-semibold rounded-xl hover:bg-sage-600 transition-colors shadow-sm">
+                    class="w-full px-6 py-3.5 bg-ember-400 text-white font-semibold rounded-xl hover:bg-ember-500 transition-colors shadow-sm">
               Nachricht senden
             </button>
             <p class="text-xs text-gray-400 text-center">Ihre Daten werden nur zur Bearbeitung Ihrer Anfrage verwendet.</p>

@@ -4,13 +4,13 @@
 <nav class="bg-warm-100 py-3" aria-label="Breadcrumb">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <ol class="flex items-center gap-2 text-sm text-gray-500" role="list">
-      <li><a href="/" class="hover:text-sage-600 transition-colors">Startseite</a></li>
+      <li><a href="/" class="hover:text-ember-500 transition-colors">Startseite</a></li>
       {{ if .Parent }}
       <li aria-hidden="true">/</li>
-      <li><a href="{{ .Parent.Permalink }}" class="hover:text-sage-600 transition-colors">{{ .Parent.Title }}</a></li>
+      <li><a href="{{ .Parent.Permalink }}" class="hover:text-ember-500 transition-colors">{{ .Parent.Title }}</a></li>
       {{ end }}
       <li aria-hidden="true">/</li>
-      <li class="text-sage-700 font-medium" aria-current="page">{{ .Title }}</li>
+      <li class="text-ember-600 font-medium" aria-current="page">{{ .Title }}</li>
     </ol>
   </div>
 </nav>
@@ -25,11 +25,11 @@
       </div>
       {{ end }}
       {{ if eq .Section "aktuell" }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-sage-500 font-medium">
+      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-ember-400 font-medium">
         {{ .Date.Format "2. January 2006" }}
       </time>
       {{ end }}
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-sage-800 leading-tight mt-2 mb-4">{{ .Title }}</h1>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 leading-tight mt-2 mb-4">{{ .Title }}</h1>
       {{ with .Params.description }}
       <p class="text-xl text-gray-500 leading-relaxed font-light">{{ . }}</p>
       {{ end }}
@@ -37,30 +37,30 @@
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none
-      prose-headings:font-serif prose-headings:text-sage-800
+      prose-headings:font-serif prose-headings:text-gray-800
       prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
       prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
       prose-p:text-gray-600 prose-p:leading-relaxed
-      prose-a:text-sage-600 prose-a:underline prose-a:decoration-sage-300 hover:prose-a:decoration-sage-600
-      prose-strong:text-sage-700
+      prose-a:text-ember-500 prose-a:underline prose-a:decoration-sun-300 hover:prose-a:decoration-ember-400
+      prose-strong:text-ember-600
       prose-img:rounded-2xl prose-img:shadow-md
       prose-ul:text-gray-600 prose-ol:text-gray-600
       prose-li:leading-relaxed
-      prose-blockquote:border-sage-300 prose-blockquote:bg-sage-50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:italic prose-blockquote:text-sage-700">
+      prose-blockquote:border-sun-300 prose-blockquote:bg-sun-50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:italic prose-blockquote:text-ember-600">
       {{ .Content }}
     </div>
 
     {{ if eq .Section "aktuell" }}
     <!-- Navigation zwischen Beiträgen -->
-    <nav class="mt-16 pt-8 border-t border-sage-100 flex justify-between gap-4" aria-label="Weitere Beiträge">
+    <nav class="mt-16 pt-8 border-t border-sun-100 flex justify-between gap-4" aria-label="Weitere Beiträge">
       {{ with .PrevInSection }}
-      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium group">
+      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-ember-500 hover:text-ember-600 font-medium group">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
         {{ .Title }}
       </a>
       {{ end }}
       {{ with .NextInSection }}
-      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium ml-auto group">
+      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-ember-500 hover:text-ember-600 font-medium ml-auto group">
         {{ .Title }}
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
       </a>

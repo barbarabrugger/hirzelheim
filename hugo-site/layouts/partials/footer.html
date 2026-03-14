@@ -1,7 +1,7 @@
-<footer class="bg-sage-800 text-white mt-auto" role="contentinfo">
+<footer class="bg-gray-800 text-white mt-auto" role="contentinfo">
   <!-- Warmer Abschluss -->
-  <div class="bg-sage-700 py-8 text-center">
-    <p class="text-sage-200 font-serif italic text-lg max-w-2xl mx-auto px-4">
+  <div class="bg-gray-700 py-8 text-center">
+    <p class="text-warm-200 font-serif italic text-lg max-w-2xl mx-auto px-4">
       «Dank dem familiären Umfeld kann auf individuelle Anliegen eingegangen werden.»
     </p>
   </div>
@@ -12,8 +12,8 @@
       <!-- Kontakt -->
       <div>
         <h3 class="font-serif text-lg font-bold mb-4 text-white">Kontakt</h3>
-        <address class="not-italic text-sage-300 space-y-2 text-sm leading-relaxed">
-          <p class="font-medium text-sage-100">Stiftung Hirzelheim</p>
+        <address class="not-italic text-warm-300 space-y-2 text-sm leading-relaxed">
+          <p class="font-medium text-warm-100">Stiftung Hirzelheim</p>
           <p>{{ .Site.Params.address }}</p>
           <p>
             <a href="tel:{{ .Site.Params.phone }}" class="hover:text-white transition-colors">
@@ -34,7 +34,7 @@
         <ul class="space-y-2.5 text-sm" role="list">
           {{ range .Site.Menus.main }}
           <li>
-            <a href="{{ .URL }}" class="text-sage-300 hover:text-white transition-colors">
+            <a href="{{ .URL }}" class="text-warm-300 hover:text-white transition-colors">
               {{ .Name }}
             </a>
           </li>
@@ -45,14 +45,14 @@
       <!-- Spenden -->
       <div>
         <h3 class="font-serif text-lg font-bold mb-4 text-white">Unterstützen</h3>
-        <div class="text-sage-300 text-sm space-y-3">
+        <div class="text-warm-300 text-sm space-y-3">
           <p>Helfen Sie uns, ein liebevolles Zuhause zu bieten. Spenden sind steuerlich abzugsberechtigt.</p>
-          <div class="bg-sage-700/50 rounded-lg p-3 space-y-1">
-            <p class="font-medium text-sage-100 text-xs uppercase tracking-wider">Spendenkonto</p>
-            <p class="font-mono text-xs text-sage-200">{{ .Site.Params.iban }}</p>
+          <div class="bg-gray-700/50 rounded-lg p-3 space-y-1">
+            <p class="font-medium text-warm-100 text-xs uppercase tracking-wider">Spendenkonto</p>
+            <p class="font-mono text-xs text-warm-200">{{ .Site.Params.iban }}</p>
             <p class="text-xs">{{ .Site.Params.bank }}{{ with .Site.Params.postkonto }} / PC {{ . }}{{ end }}</p>
           </div>
-          <a href="/stiftung/#spenden" class="inline-flex items-center text-sage-200 hover:text-white text-sm font-medium">
+          <a href="/stiftung/#spenden" class="inline-flex items-center text-warm-200 hover:text-white text-sm font-medium">
             Mehr erfahren →
           </a>
         </div>
@@ -77,18 +77,18 @@
     </div>
 
     <!-- Downloads & Copyright -->
-    <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex flex-wrap gap-4 text-sm">
-        <a href="/documents/Statuten_Stiftung_Hirzelheim.pdf" class="text-sage-400 hover:text-white transition-colors flex items-center gap-1.5" download>
+        <a href="/documents/Statuten_Stiftung_Hirzelheim.pdf" class="text-warm-400 hover:text-white transition-colors flex items-center gap-1.5" download>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           Statuten
         </a>
-        <a href="/documents/Anmeldeformular.pdf" class="text-sage-400 hover:text-white transition-colors flex items-center gap-1.5" download>
+        <a href="/documents/Anmeldeformular.pdf" class="text-warm-400 hover:text-white transition-colors flex items-center gap-1.5" download>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           Anmeldeformular
         </a>
       </div>
-      <p class="text-sage-500 text-xs">
+      <p class="text-warm-400 text-xs">
         &copy; {{ now.Year }} Stiftung Hirzelheim Regensberg
       </p>
     </div>

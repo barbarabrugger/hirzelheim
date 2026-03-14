@@ -7,7 +7,7 @@
   <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
   <!-- Favicon -->
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/logo.png" type="image/png">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,31 +16,63 @@
       theme: {
         extend: {
           colors: {
-            sage: {
-              50: '#f6f8f4',
-              100: '#e8efe4',
-              200: '#d2dfcb',
-              300: '#b0c9a4',
-              400: '#8aad7a',
-              500: '#6d9460',
-              600: '#567a4b',
-              700: '#45613d',
-              800: '#3a5034',
-              900: '#2f422c',
+            /* Aus dem Logo abgeleitet: Gold → Orange → Terracotta */
+            sun: {
+              50: '#fef9f0',
+              100: '#fdf0db',
+              200: '#fbe0b5',
+              300: '#f6c96e',
+              400: '#e8a838',  /* Logo-Gold */
+              500: '#d99220',
+              600: '#c07818',
+              700: '#9a5c15',
+              800: '#7d4a18',
+              900: '#68401a',
+            },
+            ember: {
+              50: '#fef5f0',
+              100: '#fde8db',
+              200: '#facdb5',
+              300: '#f5a878',
+              400: '#e87830',  /* Logo-Orange */
+              500: '#d46020',
+              600: '#c04818',
+              700: '#9a3815',
+              800: '#7d3018',
+              900: '#682c1a',
+            },
+            terra: {
+              50: '#fdf3f0',
+              100: '#fce4db',
+              200: '#f8c5b5',
+              300: '#f0a088',
+              400: '#d05028',  /* Logo-Rot-Orange */
+              500: '#b84020',
+              600: '#a03518',
+              700: '#802c15',
+              800: '#682818',
+              900: '#58241a',
+            },
+            /* Natur-Grün als Komplementärfarbe */
+            nature: {
+              50: '#f4f7f2',
+              100: '#e6ede2',
+              200: '#cddbc5',
+              300: '#a8c29c',
+              400: '#7c9e6e',
+              500: '#5f8252',
+              600: '#4a6840',
+              700: '#3c5435',
+              800: '#33452e',
+              900: '#2b3a27',
             },
             warm: {
-              50: '#FBF9F4',
-              100: '#f7f1e6',
-              200: '#efe3cc',
-              300: '#e2ceaa',
-              400: '#d4b88a',
-              500: '#c4a06a',
-            },
-            terracotta: {
-              300: '#e8a88a',
-              400: '#d4896a',
-              500: '#c07050',
-              600: '#a65a3c',
+              50: '#FFFCF7',
+              100: '#FFF7EC',
+              200: '#FFEFD6',
+              300: '#FFE4B8',
+              400: '#e8cfa0',
+              500: '#d4b888',
             },
           },
           fontFamily: {
@@ -52,7 +84,7 @@
     }
   </script>
 
-  <!-- Fonts: Source Sans 3 (body) + Merriweather (headings) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -62,7 +94,7 @@
     body {
       font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
       color: #3D3D3D;
-      background-color: #FBF9F4;
+      background-color: #FFFCF7;
     }
     h1, h2, h3 {
       font-family: 'Merriweather', Georgia, serif;
@@ -71,7 +103,7 @@
       position: absolute;
       top: -100%;
       left: 0;
-      background: #6d9460;
+      background: #e87830;
       color: white;
       padding: 0.5rem 1rem;
       z-index: 100;
@@ -87,38 +119,21 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
-    /* Weiche Wellentrenner */
-    .wave-divider {
-      position: relative;
-    }
-    .wave-divider::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background: currentColor;
-      clip-path: ellipse(55% 100% at 50% 100%);
-    }
-    /* Warmer Zitat-Stil */
     blockquote {
-      border-left: 4px solid #8aad7a;
-      background: #f6f8f4;
+      border-left: 4px solid #e8a838;
+      background: #fef9f0;
       padding: 1.25rem 1.5rem;
       border-radius: 0 0.75rem 0.75rem 0;
       font-style: italic;
     }
-    /* Prose Anpassungen */
     .prose h2, .prose h3 {
       font-family: 'Merriweather', Georgia, serif;
     }
-    /* Decorative Leaf */
     .decorative-divider {
       display: flex;
       align-items: center;
       gap: 1rem;
-      color: #b0c9a4;
+      color: #e8a838;
     }
     .decorative-divider::before,
     .decorative-divider::after {
@@ -126,6 +141,14 @@
       flex: 1;
       height: 1px;
       background: currentColor;
+      opacity: 0.5;
+    }
+    /* Logo-Gradient für Akzente */
+    .logo-gradient {
+      background: linear-gradient(135deg, #e8a838, #e87830, #d05028);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   </style>
 
