@@ -1,8 +1,8 @@
 {{ define "main" }}
 
 <!-- Breadcrumb -->
-<nav class="bg-sage-50 py-3 border-b border-sage-100" aria-label="Breadcrumb">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="bg-warm-100 py-3" aria-label="Breadcrumb">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <ol class="flex items-center gap-2 text-sm text-gray-500" role="list">
       <li><a href="/" class="hover:text-sage-600 transition-colors">Startseite</a></li>
       {{ if .Parent }}
@@ -15,48 +15,55 @@
   </div>
 </nav>
 
-<article class="py-12 md:py-16">
+<article class="py-12 md:py-20">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
-    <header class="mb-8">
+    <header class="mb-10">
       {{ with .Params.image }}
-      <div class="rounded-xl overflow-hidden mb-8 aspect-video">
+      <div class="rounded-2xl overflow-hidden mb-8 aspect-video shadow-md">
         <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="w-full h-full object-cover" loading="lazy">
       </div>
       {{ end }}
-      <h1 class="text-3xl md:text-4xl font-bold text-sage-800 leading-tight mb-4">{{ .Title }}</h1>
-      {{ with .Params.description }}
-      <p class="text-lg text-gray-500 leading-relaxed">{{ . }}</p>
-      {{ end }}
       {{ if eq .Section "aktuell" }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-sage-400 font-medium mt-2 block">
+      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-sage-500 font-medium">
         {{ .Date.Format "2. January 2006" }}
       </time>
+      {{ end }}
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-sage-800 leading-tight mt-2 mb-4">{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="text-xl text-gray-500 leading-relaxed font-light">{{ . }}</p>
       {{ end }}
     </header>
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none
-      prose-headings:text-sage-800 prose-headings:font-semibold
-      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+      prose-headings:font-serif prose-headings:text-sage-800
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
       prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
       prose-p:text-gray-600 prose-p:leading-relaxed
-      prose-a:text-sage-600 prose-a:underline hover:prose-a:text-sage-700
+      prose-a:text-sage-600 prose-a:underline prose-a:decoration-sage-300 hover:prose-a:decoration-sage-600
       prose-strong:text-sage-700
-      prose-img:rounded-xl prose-img:shadow-md
+      prose-img:rounded-2xl prose-img:shadow-md
       prose-ul:text-gray-600 prose-ol:text-gray-600
-      prose-li:leading-relaxed">
+      prose-li:leading-relaxed
+      prose-blockquote:border-sage-300 prose-blockquote:bg-sage-50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:italic prose-blockquote:text-sage-700">
       {{ .Content }}
     </div>
 
     {{ if eq .Section "aktuell" }}
-    <!-- Navigation between posts -->
-    <nav class="mt-12 pt-8 border-t border-gray-200 flex justify-between" aria-label="Beitragsnavigation">
+    <!-- Navigation zwischen Beiträgen -->
+    <nav class="mt-16 pt-8 border-t border-sage-100 flex justify-between gap-4" aria-label="Weitere Beiträge">
       {{ with .PrevInSection }}
-      <a href="{{ .Permalink }}" class="text-sage-600 hover:text-sage-700 text-sm font-medium">← {{ .Title }}</a>
+      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        {{ .Title }}
+      </a>
       {{ end }}
       {{ with .NextInSection }}
-      <a href="{{ .Permalink }}" class="text-sage-600 hover:text-sage-700 text-sm font-medium ml-auto">{{ .Title }} →</a>
+      <a href="{{ .Permalink }}" class="flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium ml-auto group">
+        {{ .Title }}
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
       {{ end }}
     </nav>
     {{ end }}

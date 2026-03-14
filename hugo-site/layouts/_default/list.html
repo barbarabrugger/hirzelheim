@@ -1,81 +1,116 @@
 {{ define "main" }}
 
-<!-- Page Header -->
-<section class="bg-sage-50 py-12 md:py-16 border-b border-sage-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl md:text-4xl font-bold text-sage-800 mb-3">{{ .Title }}</h1>
+<!-- Page Header — warm mit Farbe -->
+<section class="bg-sage-600 text-white py-16 md:py-20 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <svg width="100%" height="100%" aria-hidden="true"><circle cx="85%" cy="20%" r="200" fill="white"/><circle cx="10%" cy="80%" r="150" fill="white"/></svg>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <nav class="mb-4" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-sage-200" role="list">
+        <li><a href="/" class="hover:text-white transition-colors">Startseite</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-white font-medium" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1 class="text-3xl md:text-5xl font-serif font-bold leading-tight">{{ .Title }}</h1>
     {{ with .Params.description }}
-    <p class="text-lg text-gray-500 max-w-2xl">{{ . }}</p>
+    <p class="text-lg md:text-xl text-sage-100 mt-4 max-w-2xl font-light">{{ . }}</p>
     {{ end }}
+  </div>
+  <!-- Wellenform unten -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" fill="#FBF9F4"/>
+    </svg>
   </div>
 </section>
 
 <section class="py-12 md:py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {{ if eq .Section "aktuell" }}
-    <!-- Blog/Tagebuch Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Tagebuch Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {{ range .Pages }}
-      <article class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-        <div class="aspect-video bg-sage-100 flex items-center justify-center text-sage-300">
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover group">
+        <div class="aspect-[4/3] bg-sage-100 flex items-center justify-center text-sage-300 overflow-hidden">
           {{ with .Params.image }}
-          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="w-full h-full object-cover" loading="lazy">
+          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           {{ else }}
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <div class="text-center p-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-2 text-sage-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="text-xs text-sage-300">Bild folgt</span>
+          </div>
           {{ end }}
         </div>
-        <div class="p-5">
-          <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-xs text-sage-400 font-medium">
+        <div class="p-6">
+          <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-sage-400">
             {{ .Date.Format "2. January 2006" }}
           </time>
-          <h2 class="font-semibold text-sage-800 mt-1 mb-2 text-lg">
-            <a href="{{ .Permalink }}" class="hover:text-sage-600">{{ .Title }}</a>
+          <h2 class="font-serif font-bold text-sage-800 mt-2 mb-2 text-lg group-hover:text-sage-600 transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h2>
-          <p class="text-gray-600 text-sm line-clamp-3">{{ .Summary }}</p>
+          <p class="text-gray-600 text-sm line-clamp-3 leading-relaxed">{{ .Summary }}</p>
         </div>
       </article>
       {{ end }}
     </div>
 
-    <!-- Pagination -->
     {{ template "_internal/pagination.html" . }}
 
     {{ else if eq .Section "stellen" }}
-    <!-- Stellen List -->
+    <!-- Stellen -->
     {{ range .Pages }}
-    <article class="bg-white rounded-xl p-6 md:p-8 shadow-sm mb-6 card-hover">
+    <article class="bg-white rounded-2xl p-6 md:p-8 shadow-sm mb-6 card-hover border border-sage-100">
       <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
         <div>
-          <h2 class="text-xl font-semibold text-sage-800 mb-2">
-            <a href="{{ .Permalink }}" class="hover:text-sage-600">{{ .Title }}</a>
+          <h2 class="text-xl font-serif font-bold text-sage-800 mb-3">
+            <a href="{{ .Permalink }}" class="hover:text-sage-600 transition-colors">{{ .Title }}</a>
           </h2>
-          {{ with .Params.pensum }}<span class="inline-block bg-sage-100 text-sage-700 text-xs font-medium px-2.5 py-1 rounded-full mr-2">{{ . }}</span>{{ end }}
-          {{ with .Params.start }}<span class="inline-block bg-warm-100 text-earth-700 text-xs font-medium px-2.5 py-1 rounded-full">Ab {{ . }}</span>{{ end }}
-          <p class="text-gray-600 mt-3 text-sm">{{ .Summary }}</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            {{ with .Params.pensum }}<span class="inline-block bg-sage-100 text-sage-700 text-xs font-medium px-3 py-1 rounded-full">{{ . }}</span>{{ end }}
+            {{ with .Params.start }}<span class="inline-block bg-warm-100 text-warm-500 text-xs font-medium px-3 py-1 rounded-full">Ab {{ . }}</span>{{ end }}
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed">{{ .Summary }}</p>
         </div>
-        <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-2 bg-sage-400 text-white text-sm font-medium rounded-lg hover:bg-sage-500 transition-colors whitespace-nowrap flex-shrink-0">
-          Details →
+        <a href="{{ .Permalink }}" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-medium rounded-full hover:bg-sage-600 transition-colors whitespace-nowrap flex-shrink-0 shadow-sm">
+          Mehr erfahren
         </a>
       </div>
     </article>
     {{ else }}
-    <div class="bg-sage-50 rounded-xl p-8 text-center">
-      <p class="text-gray-500 text-lg">Aktuell sind keine offenen Stellen ausgeschrieben.</p>
-      <p class="text-gray-400 text-sm mt-2">Initiativbewerbungen sind jederzeit willkommen.</p>
+    <div class="bg-warm-100 rounded-2xl p-10 text-center">
+      <div class="text-sage-300 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      <p class="text-gray-600 text-lg font-serif">Aktuell sind keine offenen Stellen ausgeschrieben.</p>
+      <p class="text-gray-400 mt-2">Initiativbewerbungen sind jederzeit willkommen an <a href="mailto:{{ .Site.Params.email }}" class="text-sage-600 underline">{{ .Site.Params.email }}</a></p>
     </div>
     {{ end }}
 
     {{ else }}
-    <!-- Default: Subpages as sections -->
-    {{ range .Pages }}
-    <div class="mb-12">
-      <h2 class="text-2xl font-bold text-sage-800 mb-4">{{ .Title }}</h2>
-      <div class="prose prose-lg max-w-none prose-headings:text-sage-800 prose-p:text-gray-600 prose-a:text-sage-600">
-        {{ .Content }}
-      </div>
+    <!-- Sektionsseiten (Über uns, Leben im Heim, Stiftung) -->
+    <div class="prose prose-lg max-w-3xl mx-auto
+      prose-headings:font-serif prose-headings:text-sage-800
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-3 prose-h2:border-b prose-h2:border-sage-200
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:text-gray-600 prose-p:leading-relaxed
+      prose-a:text-sage-600 prose-a:underline prose-a:decoration-sage-300 hover:prose-a:decoration-sage-600
+      prose-strong:text-sage-700
+      prose-img:rounded-2xl prose-img:shadow-md
+      prose-ul:text-gray-600 prose-ol:text-gray-600
+      prose-li:leading-relaxed
+      prose-table:text-sm
+      prose-th:bg-sage-50 prose-th:text-sage-800 prose-th:font-semibold
+      prose-td:border-sage-100
+      prose-blockquote:border-sage-300 prose-blockquote:bg-sage-50 prose-blockquote:rounded-r-xl prose-blockquote:italic prose-blockquote:text-sage-700">
+      {{ .Content }}
+
+      {{ range .Pages }}
+      {{ .Content }}
+      {{ end }}
     </div>
-    {{ end }}
     {{ end }}
 
   </div>

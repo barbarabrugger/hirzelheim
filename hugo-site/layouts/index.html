@@ -1,154 +1,203 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="relative bg-sage-400 overflow-hidden" aria-label="Willkommen">
-  <div class="absolute inset-0 bg-gradient-to-r from-sage-800/60 to-sage-600/40 z-10"></div>
-  <!-- Placeholder for hero image -->
-  <div class="absolute inset-0 bg-gradient-to-br from-sage-300 to-sage-500">
-    <div class="absolute inset-0 flex items-center justify-center text-sage-200/30 text-sm">
-      <!-- BILD: Hero-Bild Garten/Aussicht Regensberg -->
-    </div>
+<!-- Hero Section — Gross, emotional, einladend -->
+<section class="relative overflow-hidden min-h-[70vh] md:min-h-[80vh] flex items-center" aria-label="Willkommen">
+  <!-- Hintergrundbild (Platzhalter: warmer Farbverlauf) -->
+  <div class="absolute inset-0 bg-gradient-to-br from-sage-700 via-sage-600 to-sage-500">
+    {{ with .Params.hero_image }}
+    <img src="{{ . }}" alt="Blick auf das Hirzelheim in Regensberg" class="absolute inset-0 w-full h-full object-cover">
+    {{ end }}
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
   </div>
-  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 lg:py-44">
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
     <div class="max-w-2xl">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+      <p class="text-sage-200 text-sm md:text-base tracking-widest uppercase mb-4 font-medium">Stiftung Hirzelheim Regensberg</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
         {{ .Params.hero_title | default "Ein Zuhause mit Herz und Geschichte" }}
       </h1>
-      <p class="text-lg md:text-xl text-sage-100 mb-8 leading-relaxed">
-        {{ .Params.hero_subtitle | default "Alters- und Pflegeheim für hörbehinderte und betagte Menschen im historischen Regensberg" }}
+      <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed font-light">
+        {{ .Params.hero_subtitle | default "Ein Zuhause für gehörlose, schwerhörige und hörende Menschen im historischen Regensberg — seit 1912" }}
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/kontakt/" class="inline-flex items-center justify-center px-6 py-3 bg-white text-sage-700 font-semibold rounded-lg hover:bg-sage-50 transition-colors text-base">
-          Kontakt aufnehmen
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/kontakt/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-sage-700 font-semibold rounded-full hover:bg-sage-50 transition-all text-lg shadow-lg hover:shadow-xl">
+          Besuchen Sie uns
         </a>
-        <a href="/ueber-uns/" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-base">
-          Mehr erfahren
+        <a href="tel:{{ .Site.Params.phone }}" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/80 text-white font-medium rounded-full hover:bg-white/10 transition-all text-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          {{ .Site.Params.phone }}
         </a>
       </div>
     </div>
   </div>
+
+  <!-- Weiche untere Kante -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,80 L0,40 Q360,0 720,40 Q1080,80 1440,40 L1440,80 Z" fill="#FBF9F4"/>
+    </svg>
+  </div>
 </section>
 
-<!-- Kurzvorstellung -->
+<!-- Willkommen — persönlich und warm -->
 <section class="py-16 md:py-24 bg-warm-50" aria-labelledby="intro-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 id="intro-heading" class="text-2xl md:text-3xl font-bold text-sage-800 mb-6">
-        Willkommen im Hirzelheim
+      <div class="decorative-divider mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" opacity="0"/>
+          <path d="M17.8 8.2c-.5-1.2-1.7-2-3-2.2-.5-.1-1 0-1.5.2-.3.1-.6.3-.8.5-.5-.5-1.2-.7-1.9-.7-1.8 0-3.2 1.4-3.2 3.2 0 .4.1.8.2 1.2-1.5.6-2.6 2.1-2.6 3.8 0 2.3 1.9 4.2 4.2 4.2h7.6c2.3 0 4.2-1.9 4.2-4.2 0-2-1.4-3.7-3.2-4z"/>
+        </svg>
+      </div>
+      <h2 id="intro-heading" class="text-3xl md:text-4xl font-serif font-bold text-sage-800 mb-6">
+        Willkommen daheim
       </h2>
-      <p class="text-lg text-gray-600 leading-relaxed mb-8">
-        Die Stiftung Hirzelheim Regensberg bietet gehörlosen, schwerhörigen und hörenden Frauen und Männern einen Lebensraum, in dem sie sich zuhause fühlen. In unserem über 450-jährigen Riegelhaus, an prächtiger Aussichtslage eingangs des Städtchens Regensberg, bieten wir ein liebevolles Zuhause — familiär, persönlich und mitten im Grünen.
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Die Stiftung Hirzelheim Regensberg bietet gehörlosen, schwerhörigen und hörenden Frauen und Männern einen Lebensraum, in dem sie sich zuhause fühlen. In unserem über 450-jährigen Riegelhaus, an prächtiger Aussichtslage im Städtchen Regensberg, bieten wir ein liebevolles Zuhause — familiär, persönlich und mitten im Grünen.
       </p>
     </div>
+  </div>
+</section>
 
-    <!-- USP Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-      <div class="bg-white rounded-xl p-6 shadow-sm card-hover text-center">
-        <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+<!-- Was uns ausmacht — emotionale Karten -->
+<section class="py-16 md:py-20 bg-white" aria-labelledby="usp-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="usp-heading" class="sr-only">Was uns ausmacht</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Familiär -->
+      <div class="text-center px-4">
+        <div class="w-20 h-20 bg-sage-50 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-sage-800 text-lg mb-2">Familiär & persönlich</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Mit 14 Zimmern kennen wir jede Bewohnerin und jeden Bewohner persönlich. Hier ist man keine Nummer.
+        <h3 class="font-serif text-xl font-bold text-sage-800 mb-3">Familiär & herzlich</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Mit 14 Zimmern sind wir klein genug, um jeden Menschen persönlich zu kennen — und gross genug, um professionelle Pflege zu bieten. Hier ist jeder Mensch wichtig.
         </p>
       </div>
 
-      <div class="bg-white rounded-xl p-6 shadow-sm card-hover text-center">
-        <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+      <!-- Kompetenz -->
+      <div class="text-center px-4">
+        <div class="w-20 h-20 bg-sage-50 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-sage-800 text-lg mb-2">Kompetente Pflege</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Unser erfahrenes Team bietet professionelle Pflege und Betreuung — individuell abgestimmt auf die Bedürfnisse jedes einzelnen Menschen.
+        <h3 class="font-serif text-xl font-bold text-sage-800 mb-3">Gebärdensprache & Verständnis</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Gehörlose und hörende Fachleute arbeiten Seite an Seite. Bei uns wird in Gebärdensprache kommuniziert, gelacht und gelebt — seit über hundert Jahren.
         </p>
       </div>
 
-      <div class="bg-white rounded-xl p-6 shadow-sm card-hover text-center">
-        <div class="w-14 h-14 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+      <!-- Lage -->
+      <div class="text-center px-4">
+        <div class="w-20 h-20 bg-sage-50 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-sage-800 text-lg mb-2">Einzigartige Lage</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Hoch über dem Zürcher Unterland, im mittelalterlichen Städtchen Regensberg, geniessen unsere Bewohnenden Ruhe und eine atemberaubende Aussicht.
+        <h3 class="font-serif text-xl font-bold text-sage-800 mb-3">Einmalige Lage</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Hoch über dem Zürcher Unterland, im mittelalterlichen Regensberg — mit Blick auf die Berge, Garten vor der Tür und trotzdem nur 30 Minuten ab Zürich HB.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Freie Plätze CTA -->
-<section class="py-12 bg-sage-400" aria-labelledby="cta-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 id="cta-heading" class="text-2xl md:text-3xl font-bold text-white mb-4">
-      Suchen Sie einen Heimplatz?
-    </h2>
-    <p class="text-sage-100 text-lg mb-6 max-w-2xl mx-auto">
-      Wir nehmen uns Zeit für Sie. Rufen Sie uns an oder besuchen Sie uns für eine unverbindliche Besichtigung.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="tel:{{ .Site.Params.phone }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-sage-700 font-semibold rounded-lg hover:bg-sage-50 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-        </svg>
-        {{ .Site.Params.phone }}
-      </a>
-      <a href="/kontakt/" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
-        Kontaktformular
-      </a>
+<!-- Emotionales Zitat -->
+<section class="py-16 md:py-24 bg-sage-600 text-white relative overflow-hidden" aria-label="Zitat">
+  <div class="absolute inset-0 opacity-10">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <circle cx="20" cy="50" r="40" fill="white" opacity="0.1"/>
+      <circle cx="80" cy="30" r="30" fill="white" opacity="0.05"/>
+    </svg>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <svg class="h-12 w-12 text-sage-300 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+    </svg>
+    <blockquote class="text-2xl md:text-3xl font-serif font-light leading-relaxed mb-6 bg-transparent border-none p-0 italic text-white">
+      Auch wenn keine Aussicht auf Gesundung mehr besteht, sorgt das Heim für eine umfassende und liebevolle Begleitung bis ans Lebensende.
+    </blockquote>
+    <cite class="text-sage-200 text-base not-italic">— Aus dem Leitbild der Stiftung Hirzelheim</cite>
+  </div>
+</section>
+
+<!-- Suchen Sie einen Heimplatz? — einladend, nicht salesy -->
+<section class="py-16 md:py-20 bg-warm-100" aria-labelledby="cta-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row md:items-center gap-8">
+      <div class="flex-grow">
+        <h2 id="cta-heading" class="text-2xl md:text-3xl font-serif font-bold text-sage-800 mb-3">
+          Suchen Sie ein Zuhause für einen lieben Menschen?
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Wir nehmen uns Zeit für Sie und Ihre Fragen. Besuchen Sie uns für eine unverbindliche Besichtigung — bei einer Tasse Kaffee lernen Sie unser Haus und unser Team kennen.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 flex-shrink-0">
+        <a href="tel:{{ .Site.Params.phone }}" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-sage-500 text-white font-semibold rounded-full hover:bg-sage-600 transition-colors shadow-sm text-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Anrufen
+        </a>
+        <a href="/kontakt/" class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-sage-300 text-sage-700 font-medium rounded-full hover:bg-sage-50 transition-colors">
+          Schreiben Sie uns
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Aktuelles / Tagebuch -->
+<!-- Aus dem Alltag — Tagebuch -->
 <section class="py-16 md:py-24 bg-warm-50" aria-labelledby="aktuell-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-end mb-10">
-      <div>
-        <h2 id="aktuell-heading" class="text-2xl md:text-3xl font-bold text-sage-800">Aus dem Alltag</h2>
-        <p class="text-gray-500 mt-2">Einblicke in unser Heimleben</p>
-      </div>
-      <a href="/aktuell/" class="text-sage-600 hover:text-sage-700 font-medium text-sm hidden sm:inline-flex items-center gap-1">
-        Alle Beiträge
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-      </a>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 id="aktuell-heading" class="text-3xl md:text-4xl font-serif font-bold text-sage-800 mb-3">Aus unserem Alltag</h2>
+      <p class="text-gray-500 text-lg">Kleine Geschichten und grosse Momente</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {{ $pages := where .Site.RegularPages "Section" "aktuell" }}
       {{ range first 3 $pages }}
-      <article class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-        <div class="aspect-video bg-sage-100 flex items-center justify-center text-sage-300">
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover group">
+        <div class="aspect-[4/3] bg-sage-100 flex items-center justify-center text-sage-300 overflow-hidden">
           {{ with .Params.image }}
-          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="w-full h-full object-cover" loading="lazy">
+          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           {{ else }}
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <div class="text-center p-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-2 text-sage-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="text-xs text-sage-300">Bild folgt</span>
+          </div>
           {{ end }}
         </div>
-        <div class="p-5">
-          <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-xs text-sage-400 font-medium">
+        <div class="p-6">
+          <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-sage-400">
             {{ .Date.Format "2. January 2006" }}
           </time>
-          <h3 class="font-semibold text-sage-800 mt-1 mb-2">
-            <a href="{{ .Permalink }}" class="hover:text-sage-600">{{ .Title }}</a>
+          <h3 class="font-serif font-bold text-sage-800 text-lg mt-2 mb-2 group-hover:text-sage-600 transition-colors">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
-          <p class="text-gray-600 text-sm line-clamp-3">{{ .Summary }}</p>
+          <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">{{ .Summary }}</p>
         </div>
       </article>
       {{ else }}
       <!-- Placeholder wenn noch keine Beiträge -->
       {{ range seq 3 }}
-      <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-        <div class="aspect-video bg-sage-100 flex items-center justify-center text-sage-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+        <div class="aspect-[4/3] bg-sage-50 flex items-center justify-center">
+          <div class="text-center p-6 text-sage-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="text-xs">Bild folgt</span>
+          </div>
         </div>
-        <div class="p-5">
+        <div class="p-6">
           <div class="h-3 bg-sage-100 rounded w-24 mb-3"></div>
           <div class="h-5 bg-sage-100 rounded w-3/4 mb-2"></div>
           <div class="h-3 bg-sage-50 rounded w-full mb-1"></div>
@@ -159,44 +208,64 @@
       {{ end }}
     </div>
 
-    <div class="text-center mt-8 sm:hidden">
-      <a href="/aktuell/" class="text-sage-600 hover:text-sage-700 font-medium">Alle Beiträge ansehen →</a>
+    <div class="text-center mt-10">
+      <a href="/aktuell/" class="inline-flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium text-lg group">
+        Alle Beiträge ansehen
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Kontakt-Block -->
-<section class="py-16 md:py-20 bg-white" aria-labelledby="kontakt-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Kontakt-Block — persönlich -->
+<section class="py-16 md:py-24 bg-white" aria-labelledby="kontakt-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 id="kontakt-heading" class="text-2xl md:text-3xl font-bold text-sage-800 mb-4">Wir freuen uns auf Sie</h2>
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Haben Sie Fragen oder möchten Sie das Hirzelheim kennenlernen? Wir laden Sie herzlich zu einer unverbindlichen Besichtigung ein. Rufen Sie uns einfach an.
+        <h2 id="kontakt-heading" class="text-3xl md:text-4xl font-serif font-bold text-sage-800 mb-6">
+          Wir freuen uns<br>auf Ihren Besuch
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+          Lernen Sie das Hirzelheim persönlich kennen. Bei einer Tasse Kaffee zeigen wir Ihnen unser Haus, den Garten und die wunderbare Aussicht. Rufen Sie uns einfach an — wir sind für Sie da.
         </p>
-        <div class="space-y-3 text-gray-600">
-          <div class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sage-400 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-            </svg>
-            <span>{{ .Site.Params.address }}</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sage-400 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-            </svg>
-            <a href="tel:{{ .Site.Params.phone }}" class="hover:text-sage-600 transition-colors">{{ .Site.Params.phone }}</a>
-          </div>
-          <div class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sage-400 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-            </svg>
-            <a href="mailto:{{ .Site.Params.email }}" class="hover:text-sage-600 transition-colors">{{ .Site.Params.email }}</a>
+        <div class="space-y-4">
+          <a href="tel:{{ .Site.Params.phone }}" class="flex items-center gap-4 p-4 bg-sage-50 rounded-xl hover:bg-sage-100 transition-colors group">
+            <div class="w-12 h-12 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-sage-600 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sage-800">{{ .Site.Params.phone }}</div>
+              <div class="text-sm text-gray-500">Wir sind gerne für Sie da</div>
+            </div>
+          </a>
+          <a href="mailto:{{ .Site.Params.email }}" class="flex items-center gap-4 p-4 bg-sage-50 rounded-xl hover:bg-sage-100 transition-colors group">
+            <div class="w-12 h-12 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-sage-600 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sage-800">{{ .Site.Params.email }}</div>
+              <div class="text-sm text-gray-500">Schreiben Sie uns jederzeit</div>
+            </div>
+          </a>
+          <div class="flex items-center gap-4 p-4 bg-sage-50 rounded-xl">
+            <div class="w-12 h-12 bg-sage-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sage-800">{{ .Site.Params.address }}</div>
+              <div class="text-sm text-gray-500">30 Min. ab Zürich HB</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="rounded-xl overflow-hidden shadow-md aspect-video">
+      <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
         <iframe
           src="{{ .Site.Params.mapsEmbed }}"
           width="100%" height="100%"
