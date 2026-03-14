@@ -1,0 +1,91 @@
+<footer class="bg-sage-800 text-white mt-auto" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+
+      <!-- Kontakt -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-sage-200">Kontakt</h3>
+        <address class="not-italic text-sage-300 space-y-2 text-sm leading-relaxed">
+          <p class="font-medium text-white">Stiftung Hirzelheim</p>
+          <p>{{ .Site.Params.address }}</p>
+          <p>
+            <a href="tel:{{ .Site.Params.phone }}" class="hover:text-white transition-colors">
+              Tel. {{ .Site.Params.phone }}
+            </a>
+          </p>
+          <p>
+            <a href="mailto:{{ .Site.Params.email }}" class="hover:text-white transition-colors">
+              {{ .Site.Params.email }}
+            </a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-sage-200">Navigation</h3>
+        <ul class="space-y-2 text-sm" role="list">
+          {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}" class="text-sage-300 hover:text-white transition-colors">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Spenden -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-sage-200">Spenden</h3>
+        <div class="text-sage-300 text-sm space-y-2">
+          <p>Ihre Spende hilft uns, den Bewohnerinnen und Bewohnern ein liebevolles Zuhause zu bieten.</p>
+          <p class="font-medium text-white">IBAN</p>
+          <p class="font-mono text-xs">{{ .Site.Params.iban }}</p>
+          <p>{{ .Site.Params.bank }}</p>
+        </div>
+      </div>
+
+      <!-- Karte -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-sage-200">So finden Sie uns</h3>
+        <div class="rounded-lg overflow-hidden aspect-square">
+          <iframe
+            src="{{ .Site.Params.mapsEmbed }}"
+            width="100%" height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Standort Stiftung Hirzelheim auf Google Maps">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Downloads -->
+    <div class="mt-10 pt-8 border-t border-sage-700">
+      <h3 class="text-sm font-semibold text-sage-200 mb-3">Downloads</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a href="/documents/Statuten_Stiftung_Hirzelheim.pdf" class="text-sage-300 hover:text-white transition-colors flex items-center gap-1" download>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6z" clip-rule="evenodd"/></svg>
+          Statuten
+        </a>
+        <a href="/documents/Taxordnung_2025.pdf" class="text-sage-300 hover:text-white transition-colors flex items-center gap-1" download>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6z" clip-rule="evenodd"/></svg>
+          Taxordnung 2025
+        </a>
+        <a href="/documents/Anmeldeformular.pdf" class="text-sage-300 hover:text-white transition-colors flex items-center gap-1" download>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6z" clip-rule="evenodd"/></svg>
+          Anmeldeformular
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 pt-6 border-t border-sage-700 text-center text-sage-400 text-xs">
+      <p>&copy; {{ now.Year }} Stiftung Hirzelheim Regensberg. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>

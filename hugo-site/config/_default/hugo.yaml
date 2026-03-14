@@ -1,0 +1,78 @@
+baseURL: "https://hirzelheim.ch/"
+languageCode: "de-CH"
+title: "Stiftung Hirzelheim Regensberg"
+enableRobotsTXT: true
+enableEmoji: false
+
+# Build settings
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Pagination
+pagination:
+  pagerSize: 9
+
+# Taxonomies
+taxonomies:
+  kategorie: kategorien
+
+# Menu
+menus:
+  main:
+    - name: "Über uns"
+      url: "/ueber-uns/"
+      weight: 10
+    - name: "Leben im Heim"
+      url: "/leben-im-heim/"
+      weight: 20
+    - name: "Stiftung"
+      url: "/stiftung/"
+      weight: 30
+    - name: "Aktuell"
+      url: "/aktuell/"
+      weight: 40
+    - name: "Stellen"
+      url: "/stellen/"
+      weight: 50
+    - name: "Kontakt"
+      url: "/kontakt/"
+      weight: 60
+
+# Site params
+params:
+  description: "Stiftung Hirzelheim Regensberg — Alters- und Pflegeheim für hörbehinderte und betagte Menschen in einem historischen Riegelhaus."
+  phone: "044 853 12 28"
+  email: "info@hirzelheim.ch"
+  address: "Oberburg 6, 8158 Regensberg"
+  iban: "CH30 0070 0110 0009 0604 8"
+  bank: "Zürcher Kantonalbank"
+  mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.8!2d8.4372!3d47.4839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b0e8c8e1b1d%3A0x4e8e8e8e8e8e8e8e!2sStiftung%20Hirzelheim!5e0!3m2!1sde!2sch!4v1"
+  # Social
+  facebook: ""
+  instagram: ""
+
+  # Colors (used in templates)
+  colorPrimary: "#7C9070"       # Salbeigrün
+  colorPrimaryDark: "#5A6F50"
+  colorSecondary: "#D4C5A9"     # Warmes Beige
+  colorAccent: "#B8860B"        # Goldbraun
+  colorBackground: "#FAFAF5"    # Warmes Weiss
+  colorText: "#3D3D3D"          # Dunkelgrau
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+
+security:
+  funcs:
+    getenv:
+      - "^HUGO_"

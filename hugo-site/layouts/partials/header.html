@@ -1,0 +1,60 @@
+<header class="bg-white shadow-sm sticky top-0 z-50" role="banner">
+  <!-- Top Bar mit Telefon -->
+  <div class="bg-sage-400 text-white text-sm py-1.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <span class="hidden sm:inline">Alters- und Pflegeheim für hörbehinderte und betagte Menschen</span>
+      <a href="tel:{{ .Site.Params.phone }}" class="flex items-center gap-1.5 hover:text-sage-100 font-medium" aria-label="Telefon: {{ .Site.Params.phone }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        {{ .Site.Params.phone }}
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Hauptnavigation">
+    <div class="flex justify-between items-center h-16 md:h-20">
+      <!-- Logo / Name -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="Stiftung Hirzelheim — Zur Startseite">
+        <div class="w-10 h-10 md:w-12 md:h-12 bg-sage-400 rounded-lg flex items-center justify-center text-white font-bold text-lg md:text-xl group-hover:bg-sage-500 transition-colors" aria-hidden="true">H</div>
+        <div>
+          <div class="font-semibold text-sage-700 text-lg md:text-xl leading-tight">Hirzelheim</div>
+          <div class="text-xs text-sage-400 hidden sm:block">Regensberg</div>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-1">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-sage-600 hover:bg-sage-50 rounded-md transition-colors{{ if $.IsMenuCurrent "main" . }} text-sage-600 bg-sage-50{{ end }}">
+          {{ .Name }}
+        </a>
+        {{ end }}
+        <a href="/kontakt/" class="ml-3 px-4 py-2 bg-sage-400 text-white text-sm font-medium rounded-lg hover:bg-sage-500 transition-colors">
+          Kontakt
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button type="button" class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-sage-50"
+              aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-100" role="navigation" aria-label="Mobile Navigation">
+      <div class="pt-2 space-y-1">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="block px-3 py-2.5 text-base font-medium text-gray-700 hover:text-sage-600 hover:bg-sage-50 rounded-md">
+          {{ .Name }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+</header>

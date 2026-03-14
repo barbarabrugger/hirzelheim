@@ -1,0 +1,208 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Medien-Uploads
+media_folder: "hugo-site/static/images/uploads"
+public_folder: "/images/uploads"
+
+# Lokale Entwicklung
+local_backend: true
+
+# Deutsche Beschriftung
+locale: "de"
+
+# Slug-Einstellungen
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  # Tagebuch / Blog
+  - name: "aktuell"
+    label: "Tagebuch"
+    label_singular: "Tagebuch-Eintrag"
+    folder: "hugo-site/content/aktuell"
+    create: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+        hint: "Der Titel des Beitrags"
+
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD.MM.YYYY"
+        hint: "Datum des Beitrags"
+
+      - label: "Kurzbeschreibung"
+        name: "description"
+        widget: "string"
+        required: false
+        hint: "Kurze Beschreibung für die Vorschau (1-2 Sätze)"
+
+      - label: "Titelbild"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Ein Foto zum Beitrag (optional)"
+        media_library:
+          config:
+            max_file_size: 5120000
+
+      - label: "Bildunterschrift"
+        name: "image_alt"
+        widget: "string"
+        required: false
+        hint: "Kurze Beschreibung des Bildes (für Barrierefreiheit)"
+
+      - label: "Kategorie"
+        name: "kategorien"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - { label: "Feste", value: "Feste" }
+          - { label: "Ausflüge", value: "Ausflüge" }
+          - { label: "Alltag", value: "Alltag" }
+          - { label: "Kreatives", value: "Kreatives" }
+          - { label: "Saisonales", value: "Saisonales" }
+          - { label: "Neuigkeiten", value: "Neuigkeiten" }
+
+      - label: "Inhalt"
+        name: "body"
+        widget: "markdown"
+        hint: "Der eigentliche Beitragstext. Sie können Text formatieren und Bilder einfügen."
+
+  # Stellenanzeigen
+  - name: "stellen"
+    label: "Stellenanzeigen"
+    label_singular: "Stellenanzeige"
+    folder: "hugo-site/content/stellen"
+    create: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    summary: "{{title}} ({{pensum}})"
+    fields:
+      - label: "Stellenbezeichnung"
+        name: "title"
+        widget: "string"
+        hint: "z.B. 'Pflegefachperson HF/FH' oder 'FaGe'"
+
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD.MM.YYYY"
+
+      - label: "Kurzbeschreibung"
+        name: "description"
+        widget: "string"
+        hint: "Kurze Beschreibung der Stelle (1 Satz)"
+
+      - label: "Pensum"
+        name: "pensum"
+        widget: "string"
+        hint: "z.B. '60–80%' oder '100%'"
+
+      - label: "Stellenantritt"
+        name: "start"
+        widget: "string"
+        hint: "z.B. 'per sofort' oder '1. Mai 2026'"
+        default: "nach Vereinbarung"
+
+      - label: "Kontaktperson"
+        name: "kontaktperson"
+        widget: "string"
+        default: "Heimleitung"
+
+      - label: "Entwurf"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Aktivieren, um die Stelle noch nicht zu veröffentlichen"
+
+      - label: "Stellenbeschreibung"
+        name: "body"
+        widget: "markdown"
+        hint: "Vollständige Stellenbeschreibung mit Aufgaben, Profil und Angebot."
+
+  # Seiteninhalt bearbeiten
+  - name: "seiten"
+    label: "Seiten"
+    files:
+      - label: "Startseite"
+        name: "startseite"
+        file: "hugo-site/content/_index.md"
+        fields:
+          - label: "Titel"
+            name: "title"
+            widget: "string"
+          - label: "Hero-Titel"
+            name: "hero_title"
+            widget: "string"
+          - label: "Hero-Untertitel"
+            name: "hero_subtitle"
+            widget: "string"
+
+      - label: "Über uns"
+        name: "ueber-uns"
+        file: "hugo-site/content/ueber-uns/_index.md"
+        fields:
+          - label: "Titel"
+            name: "title"
+            widget: "string"
+          - label: "Beschreibung"
+            name: "description"
+            widget: "string"
+          - label: "Inhalt"
+            name: "body"
+            widget: "markdown"
+
+      - label: "Leben im Heim"
+        name: "leben-im-heim"
+        file: "hugo-site/content/leben-im-heim/_index.md"
+        fields:
+          - label: "Titel"
+            name: "title"
+            widget: "string"
+          - label: "Beschreibung"
+            name: "description"
+            widget: "string"
+          - label: "Inhalt"
+            name: "body"
+            widget: "markdown"
+
+      - label: "Stiftung"
+        name: "stiftung"
+        file: "hugo-site/content/stiftung/_index.md"
+        fields:
+          - label: "Titel"
+            name: "title"
+            widget: "string"
+          - label: "Beschreibung"
+            name: "description"
+            widget: "string"
+          - label: "Inhalt"
+            name: "body"
+            widget: "markdown"
+
+      - label: "Kontakt"
+        name: "kontakt"
+        file: "hugo-site/content/kontakt/_index.md"
+        fields:
+          - label: "Titel"
+            name: "title"
+            widget: "string"
+          - label: "Beschreibung"
+            name: "description"
+            widget: "string"
+          - label: "Inhalt"
+            name: "body"
+            widget: "markdown"

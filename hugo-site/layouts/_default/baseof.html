@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f4f7f2',
+              100: '#e6ede2',
+              200: '#cddbc5',
+              300: '#a8c29c',
+              400: '#7c9070',
+              500: '#5a6f50',
+              600: '#47593f',
+              700: '#384633',
+              800: '#2e3a2b',
+              900: '#273024',
+            },
+            warm: {
+              50: '#FAFAF5',
+              100: '#f5f0e8',
+              200: '#e8dcc8',
+              300: '#D4C5A9',
+              400: '#c4a87a',
+              500: '#B8860B',
+            },
+            earth: {
+              600: '#8B7355',
+              700: '#6B5B3E',
+              800: '#4A3F2B',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #3D3D3D;
+      background-color: #FAFAF5;
+    }
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: #7C9070;
+      color: white;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(124,144,112,0.1) 0%, rgba(212,197,169,0.1) 100%);
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  {{ block "head" . }}{{ end }}
+</head>
+<body class="min-h-screen flex flex-col bg-warm-50">
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  {{ partial "header.html" . }}
+
+  <main id="main-content" class="flex-grow" role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

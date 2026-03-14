@@ -1,0 +1,21 @@
+features:
+  content-assistant:
+    enabled: false  # Phase 2
+    description: "Generiert Tagebuch-Entwürfe aus Stichpunkten"
+    script: "content-assistant/generate.js"
+  image-enhancer:
+    enabled: false  # Phase 2
+    description: "Optimiert/generiert Bilder für neue Beiträge"
+    script: "image-enhancer/enhance.js"
+  quality-checker:
+    enabled: true   # Ab sofort aktiv
+    description: "Prüft Links, Alt-Texte, Ladezeiten"
+    script: "quality-checker/check.js"
+  reminder:
+    enabled: false  # Phase 2
+    description: "Erinnert per Mail wenn lange kein Beitrag erschien"
+    script: "reminder/remind.js"
+  seo-optimizer:
+    enabled: false  # Phase 2
+    description: "Schlägt Meta-Descriptions und Keywords vor"
+    script: "seo-optimizer/optimize.js"
